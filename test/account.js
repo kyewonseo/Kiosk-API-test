@@ -10,6 +10,7 @@ chai.use(chaiHttp);
 
 describe('Login', function() {
   describe(config.api.accountLogin, function() {
+    this.timeout(5000);
     var body = {
       "account_id": config.testEnv.account_id,
       "passwd": config.testEnv.passwd
