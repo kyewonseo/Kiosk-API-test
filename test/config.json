@@ -1,0 +1,15 @@
+{
+  "server": {
+    "BASE_PATH": "http://175.207.13.212:8080"
+  },
+  "testEnv": {
+    "account_id": "total_id3",
+    "passwd": "encryptionPwd",
+    "store_id": "e4c44707-d404-42f9-836b-b9e8508a5a52"
+  },
+  "api": {
+    "accountLogin": "/account/login",
+    "storeAccountList": "/store/accountList",
+    "categoryListMenu": "/category/list-menu"
+  }
+}
