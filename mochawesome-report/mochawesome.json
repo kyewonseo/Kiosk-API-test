@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 8,
-    "tests": 45,
-    "passes": 43,
+    "suites": 9,
+    "tests": 67,
+    "passes": 61,
     "pending": 0,
-    "failures": 2,
-    "start": "2017-05-08T07:32:25.795Z",
-    "end": "2017-05-08T07:32:25.912Z",
-    "duration": 117,
-    "testsRegistered": 45,
-    "passPercent": 95.6,
+    "failures": 6,
+    "start": "2017-05-08T07:51:06.624Z",
+    "end": "2017-05-08T07:51:06.764Z",
+    "duration": 140,
+    "testsRegistered": 67,
+    "passPercent": 91,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -32,7 +32,7 @@
                 "title": "http status 200 check",
                 "fullTitle": "Login /account/login http status 200 check",
                 "timedOut": false,
-                "duration": 31,
+                "duration": 34,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -41,15 +41,15 @@
                 "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.accountLogin)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "25574097-cd2e-4a81-847c-9a62ce280e99",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "bd4d8d94-f901-46ed-aa14-174150db6edb",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
                 "title": "data property existency check",
                 "fullTitle": "Login /account/login data property existency check",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -58,15 +58,15 @@
                 "code": "response.should.have.property('body');\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "2d7b3cf5-e0c3-4420-a307-55da9faa3d8b",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "4bd88829-5301-4231-8d3f-6f70be2a4829",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
                 "title": "data null check",
                 "fullTitle": "Login /account/login data null check",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -75,15 +75,15 @@
                 "code": "expect(response.body).to.not.be.null;\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "180fec35-5c35-4e65-b018-3b138d8017b4",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "412c3cdd-df9f-4880-b91b-486afbbf3b88",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
                 "title": "responseStatus 200 check",
                 "fullTitle": "Login /account/login responseStatus 200 check",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -92,15 +92,15 @@
                 "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "a5e7a26f-ade6-44fc-a2e2-40be9d973bb7",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "e37ad7e9-4812-4d5b-bef5-a19b02a3d6ed",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
                 "title": "data check",
                 "fullTitle": "Login /account/login data check",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -109,8 +109,8 @@
                 "code": "response.body.should.have.property('data').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "cf4d76ab-bad7-4aa9-8098-2847b48febcb",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "6544628c-55e0-4110-a355-57329558ce7d",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
@@ -126,8 +126,8 @@
                 "code": "response.body.data[0].should.have.property('account_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "88791e5c-590c-4686-b68a-2ee3260b42f1",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "90da6ad5-a97b-4886-9b29-be225f39daeb",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
@@ -143,8 +143,8 @@
                 "code": "response.body.data[0].should.have.property('name').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "00c327b3-312a-41f9-981f-c37c5251adc6",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "684e5f9c-7b74-4cdf-97ba-033a8643c67e",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
@@ -160,15 +160,15 @@
                 "code": "response.body.data[0].should.have.property('phone').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "9564832e-1b72-48b9-ad4a-9e98b8399662",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "9b739d5e-141c-4ec7-b2fc-1d260603a53e",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
                 "title": "data.status",
                 "fullTitle": "Login /account/login data.status",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -177,8 +177,8 @@
                 "code": "response.body.data[0].should.have.property('status').not.to.be.NaN\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "b2a87878-98ad-4a64-8f95-d2314a468df1",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "ef4555e9-f2d1-465e-b7b6-c5b74f4e6994",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               }
             ],
@@ -186,14 +186,14 @@
             "root": false,
             "_timeout": 5000,
             "file": "/test/account.js",
-            "uuid": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+            "uuid": "9e5682f9-4ac4-428f-9362-23177fe1613f",
             "fullFile": "/Users/bok95/bluehack/apiway/tc/Kiosk-API-test/test/account.js",
             "passes": [
               {
                 "title": "http status 200 check",
                 "fullTitle": "Login /account/login http status 200 check",
                 "timedOut": false,
-                "duration": 31,
+                "duration": 34,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -202,15 +202,15 @@
                 "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.accountLogin)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "25574097-cd2e-4a81-847c-9a62ce280e99",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "bd4d8d94-f901-46ed-aa14-174150db6edb",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
                 "title": "data property existency check",
                 "fullTitle": "Login /account/login data property existency check",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -219,15 +219,15 @@
                 "code": "response.should.have.property('body');\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "2d7b3cf5-e0c3-4420-a307-55da9faa3d8b",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "4bd88829-5301-4231-8d3f-6f70be2a4829",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
                 "title": "data null check",
                 "fullTitle": "Login /account/login data null check",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -236,15 +236,15 @@
                 "code": "expect(response.body).to.not.be.null;\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "180fec35-5c35-4e65-b018-3b138d8017b4",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "412c3cdd-df9f-4880-b91b-486afbbf3b88",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
                 "title": "responseStatus 200 check",
                 "fullTitle": "Login /account/login responseStatus 200 check",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -253,15 +253,15 @@
                 "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "a5e7a26f-ade6-44fc-a2e2-40be9d973bb7",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "e37ad7e9-4812-4d5b-bef5-a19b02a3d6ed",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
                 "title": "data check",
                 "fullTitle": "Login /account/login data check",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -270,8 +270,8 @@
                 "code": "response.body.should.have.property('data').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "cf4d76ab-bad7-4aa9-8098-2847b48febcb",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "6544628c-55e0-4110-a355-57329558ce7d",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
@@ -287,8 +287,8 @@
                 "code": "response.body.data[0].should.have.property('account_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "88791e5c-590c-4686-b68a-2ee3260b42f1",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "90da6ad5-a97b-4886-9b29-be225f39daeb",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
@@ -304,8 +304,8 @@
                 "code": "response.body.data[0].should.have.property('name').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "00c327b3-312a-41f9-981f-c37c5251adc6",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "684e5f9c-7b74-4cdf-97ba-033a8643c67e",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
@@ -321,15 +321,15 @@
                 "code": "response.body.data[0].should.have.property('phone').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "9564832e-1b72-48b9-ad4a-9e98b8399662",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "9b739d5e-141c-4ec7-b2fc-1d260603a53e",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               },
               {
                 "title": "data.status",
                 "fullTitle": "Login /account/login data.status",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -338,8 +338,8 @@
                 "code": "response.body.data[0].should.have.property('status').not.to.be.NaN\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "b2a87878-98ad-4a64-8f95-d2314a468df1",
-                "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+                "uuid": "ef4555e9-f2d1-465e-b7b6-c5b74f4e6994",
+                "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
                 "skipped": false
               }
             ],
@@ -356,7 +356,7 @@
             "hasFailures": false,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 33,
+            "duration": 37,
             "rootEmpty": false
           }
         ],
@@ -365,7 +365,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/account.js",
-        "uuid": "7e69d228-11fa-4730-a441-bd34a23c8460",
+        "uuid": "ea84351c-907a-4c73-9e0d-1c5a8d2b5838",
         "fullFile": "/Users/bok95/bluehack/apiway/tc/Kiosk-API-test/test/account.js",
         "passes": [],
         "failures": [],
@@ -404,8 +404,8 @@
                 "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.categoryListMenu)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "7ae53ad2-4c6f-4851-beb6-98a85eea4d7a",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "ed92a941-9aaf-4b32-8921-e04df6e7e1ba",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
@@ -421,8 +421,8 @@
                 "code": "response.should.have.property('body');\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8f87b77e-bf33-4d90-b62d-40891b4be15f",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "f95c4cdf-dd7b-4b41-a079-82afe2242565",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
@@ -438,8 +438,8 @@
                 "code": "expect(response.body).to.not.be.null;\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "bf99aaeb-f44d-4f78-aa58-77e297865e6a",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "2eed78de-f5b8-449a-9d82-eda9987e28a3",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
@@ -455,15 +455,15 @@
                 "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "39c6fa49-75a7-4fdd-a37a-6d9468bb17a1",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "88233e98-7034-4a66-a0a8-53fbd42d34fe",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
                 "title": "data check",
                 "fullTitle": "Category /category/list-menu data check",
                 "timedOut": false,
-                "duration": 4,
+                "duration": 3,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -472,8 +472,8 @@
                 "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "94b8488f-74bd-46bf-acc0-dbc951dbb915",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "d915f2a8-347a-4613-b299-dae04461e89a",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
@@ -489,8 +489,8 @@
                 "code": "response.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8cd8d184-e044-405b-a3e2-336ce77661e6",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "3b3bc127-1422-48bd-8d60-0ecd52edc10d",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
@@ -506,8 +506,8 @@
                 "code": "response.body.data[0].should.have.property('sub_category_name').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "45f0c233-9e78-4699-a575-0ba5fda83106",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "4bcf81fe-76c7-4825-8827-dee9e1c57eff",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               }
             ],
@@ -515,7 +515,7 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/category.js",
-            "uuid": "b5b23343-d72a-4773-bd51-9539da09379f",
+            "uuid": "1cbe7f87-2c08-461c-9201-1b073622d360",
             "fullFile": "/Users/bok95/bluehack/apiway/tc/Kiosk-API-test/test/category.js",
             "passes": [
               {
@@ -531,8 +531,8 @@
                 "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.categoryListMenu)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "7ae53ad2-4c6f-4851-beb6-98a85eea4d7a",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "ed92a941-9aaf-4b32-8921-e04df6e7e1ba",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
@@ -548,8 +548,8 @@
                 "code": "response.should.have.property('body');\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8f87b77e-bf33-4d90-b62d-40891b4be15f",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "f95c4cdf-dd7b-4b41-a079-82afe2242565",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
@@ -565,8 +565,8 @@
                 "code": "expect(response.body).to.not.be.null;\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "bf99aaeb-f44d-4f78-aa58-77e297865e6a",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "2eed78de-f5b8-449a-9d82-eda9987e28a3",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
@@ -582,15 +582,15 @@
                 "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "39c6fa49-75a7-4fdd-a37a-6d9468bb17a1",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "88233e98-7034-4a66-a0a8-53fbd42d34fe",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
                 "title": "data check",
                 "fullTitle": "Category /category/list-menu data check",
                 "timedOut": false,
-                "duration": 4,
+                "duration": 3,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -599,8 +599,8 @@
                 "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "94b8488f-74bd-46bf-acc0-dbc951dbb915",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "d915f2a8-347a-4613-b299-dae04461e89a",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
@@ -616,8 +616,8 @@
                 "code": "response.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8cd8d184-e044-405b-a3e2-336ce77661e6",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "3b3bc127-1422-48bd-8d60-0ecd52edc10d",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               },
               {
@@ -633,8 +633,8 @@
                 "code": "response.body.data[0].should.have.property('sub_category_name').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "45f0c233-9e78-4699-a575-0ba5fda83106",
-                "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+                "uuid": "4bcf81fe-76c7-4825-8827-dee9e1c57eff",
+                "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
                 "skipped": false
               }
             ],
@@ -651,7 +651,7 @@
             "hasFailures": false,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 23,
+            "duration": 22,
             "rootEmpty": false
           }
         ],
@@ -660,7 +660,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/category.js",
-        "uuid": "7a8e6f61-78cf-4897-8269-4731e3691a55",
+        "uuid": "5798d4c6-3b81-4a2e-8d75-8512ab03aa0c",
         "fullFile": "/Users/bok95/bluehack/apiway/tc/Kiosk-API-test/test/category.js",
         "passes": [],
         "failures": [],
@@ -690,7 +690,7 @@
                 "title": "http status 200 check",
                 "fullTitle": "Menu /menu/list http status 200 check",
                 "timedOut": false,
-                "duration": 21,
+                "duration": 17,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -699,8 +699,8 @@
                 "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.menuList)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "78105294-b330-4875-9c9a-0e0dcfb94d41",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "03e84ab4-f354-4ff4-9238-3ae712e4c345",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -716,8 +716,8 @@
                 "code": "response.should.have.property('body');\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "ef45cadd-03ee-43db-870a-0db22a86dfd0",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "41fd33b0-cf77-4985-9acd-2f2e18ee9c57",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -733,8 +733,8 @@
                 "code": "expect(response.body).to.not.be.null;\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "bf3ee18a-d114-44cd-acad-824428c76722",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "44d485c7-ef0d-4887-96c8-824a23e24141",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -750,25 +750,25 @@
                 "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "617af1df-d72d-40d2-b0d0-0d4b1c9e8ac7",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "054c0868-0be2-4940-af43-ddeac8f75df3",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
                 "title": "data check",
                 "fullTitle": "Menu /menu/list data check",
                 "timedOut": false,
-                "duration": 4,
+                "duration": 0,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
+                "code": "// console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "82ce2f0f-dea5-44b9-a6b1-6e885737648d",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "6c12bef6-7152-4ecc-aae5-0bee327f78b0",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -784,8 +784,8 @@
                 "code": "console.log(response.body.data[0].sub_category_id)\nresponse.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "819cae28-a0b0-42fe-9d5c-da9f5235480d",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "343c1dd3-4571-40df-b523-52f5a741afd8",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -801,8 +801,8 @@
                 "code": "response.body.data[0].should.have.property('menu_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "ef93ef04-f1e6-4b75-a515-77906ba301b4",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "3d646741-8224-41dd-bea9-d55c073eb65b",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -818,8 +818,8 @@
                 "code": "response.body.data[0].should.have.property('stage_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "1d308d57-10af-4d3f-8205-bf4177ba1533",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "a8bb8be7-6ffc-425e-9833-97ec602632e1",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -835,8 +835,8 @@
                 "code": "response.body.data[0].should.have.property('m_item').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8f6f094b-633b-490b-a282-61e503c8ff28",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "c89da015-be16-4afa-8f31-724744d70b0b",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -852,8 +852,8 @@
                 "code": "response.body.data[0].should.have.property('m_type').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "f5bfa088-3255-438c-ad79-0693800c4638",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "bbb9e709-31fc-405a-bedc-23ea79641761",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -869,8 +869,8 @@
                 "code": "response.body.data[0].should.have.property('price').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8fe3a573-a901-4afa-9d7b-845144f7717e",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "de58f07f-d158-4c92-9d57-66ec9730ffb6",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -886,8 +886,8 @@
                 "code": "response.body.data[0].should.have.property('points')\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "5d5bd785-3022-47e8-81f8-17b8a285ef7a",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "415b8318-cc8d-4cff-a323-7cab55aef06c",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -903,8 +903,8 @@
                 "code": "response.body.data[0].should.have.property('calory').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "88874c54-325c-4188-9698-7bd0bf73d3bf",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "cd721e03-7d7b-48b5-95ff-255446819d45",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -920,15 +920,15 @@
                 "code": "response.body.data[0].should.have.property('use_YN').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "77626b18-d872-4739-b44d-e4f5f5a645b7",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "edea1fcf-89a5-48f1-acad-a693912b379b",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
                 "title": "data.file_id",
                 "fullTitle": "Menu /menu/list data.file_id",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 2,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
@@ -943,8 +943,8 @@
                   "stack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:83:70)"
                 },
                 "isRoot": false,
-                "uuid": "777e1608-7f24-4805-a63f-2c9b5d194cc8",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "3aebab16-0efd-4df3-b560-c34129d6980e",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               }
             ],
@@ -952,14 +952,14 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/menu.js",
-            "uuid": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+            "uuid": "f879f566-5d88-4e75-9513-b6cbe5e46850",
             "fullFile": "/Users/bok95/bluehack/apiway/tc/Kiosk-API-test/test/menu.js",
             "passes": [
               {
                 "title": "http status 200 check",
                 "fullTitle": "Menu /menu/list http status 200 check",
                 "timedOut": false,
-                "duration": 21,
+                "duration": 17,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -968,8 +968,8 @@
                 "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.menuList)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "78105294-b330-4875-9c9a-0e0dcfb94d41",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "03e84ab4-f354-4ff4-9238-3ae712e4c345",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -985,8 +985,8 @@
                 "code": "response.should.have.property('body');\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "ef45cadd-03ee-43db-870a-0db22a86dfd0",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "41fd33b0-cf77-4985-9acd-2f2e18ee9c57",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1002,8 +1002,8 @@
                 "code": "expect(response.body).to.not.be.null;\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "bf3ee18a-d114-44cd-acad-824428c76722",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "44d485c7-ef0d-4887-96c8-824a23e24141",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1019,25 +1019,25 @@
                 "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "617af1df-d72d-40d2-b0d0-0d4b1c9e8ac7",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "054c0868-0be2-4940-af43-ddeac8f75df3",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
                 "title": "data check",
                 "fullTitle": "Menu /menu/list data check",
                 "timedOut": false,
-                "duration": 4,
+                "duration": 0,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
+                "code": "// console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "82ce2f0f-dea5-44b9-a6b1-6e885737648d",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "6c12bef6-7152-4ecc-aae5-0bee327f78b0",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1053,8 +1053,8 @@
                 "code": "console.log(response.body.data[0].sub_category_id)\nresponse.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "819cae28-a0b0-42fe-9d5c-da9f5235480d",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "343c1dd3-4571-40df-b523-52f5a741afd8",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1070,8 +1070,8 @@
                 "code": "response.body.data[0].should.have.property('menu_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "ef93ef04-f1e6-4b75-a515-77906ba301b4",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "3d646741-8224-41dd-bea9-d55c073eb65b",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1087,8 +1087,8 @@
                 "code": "response.body.data[0].should.have.property('stage_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "1d308d57-10af-4d3f-8205-bf4177ba1533",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "a8bb8be7-6ffc-425e-9833-97ec602632e1",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1104,8 +1104,8 @@
                 "code": "response.body.data[0].should.have.property('m_item').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8f6f094b-633b-490b-a282-61e503c8ff28",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "c89da015-be16-4afa-8f31-724744d70b0b",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1121,8 +1121,8 @@
                 "code": "response.body.data[0].should.have.property('m_type').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "f5bfa088-3255-438c-ad79-0693800c4638",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "bbb9e709-31fc-405a-bedc-23ea79641761",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1138,8 +1138,8 @@
                 "code": "response.body.data[0].should.have.property('price').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8fe3a573-a901-4afa-9d7b-845144f7717e",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "de58f07f-d158-4c92-9d57-66ec9730ffb6",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1155,8 +1155,8 @@
                 "code": "response.body.data[0].should.have.property('points')\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "5d5bd785-3022-47e8-81f8-17b8a285ef7a",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "415b8318-cc8d-4cff-a323-7cab55aef06c",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1172,8 +1172,8 @@
                 "code": "response.body.data[0].should.have.property('calory').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "88874c54-325c-4188-9698-7bd0bf73d3bf",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "cd721e03-7d7b-48b5-95ff-255446819d45",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               },
               {
@@ -1189,8 +1189,8 @@
                 "code": "response.body.data[0].should.have.property('use_YN').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "77626b18-d872-4739-b44d-e4f5f5a645b7",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "edea1fcf-89a5-48f1-acad-a693912b379b",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               }
             ],
@@ -1199,7 +1199,7 @@
                 "title": "data.file_id",
                 "fullTitle": "Menu /menu/list data.file_id",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 2,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
@@ -1214,8 +1214,8 @@
                   "stack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:83:70)"
                 },
                 "isRoot": false,
-                "uuid": "777e1608-7f24-4805-a63f-2c9b5d194cc8",
-                "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+                "uuid": "3aebab16-0efd-4df3-b560-c34129d6980e",
+                "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
                 "skipped": false
               }
             ],
@@ -1231,7 +1231,905 @@
             "hasFailures": true,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 26,
+            "duration": 19,
+            "rootEmpty": false
+          },
+          {
+            "title": "/menu/detail",
+            "suites": [],
+            "tests": [
+              {
+                "title": "http status 200 check",
+                "fullTitle": "Menu /menu/detail http status 200 check",
+                "timedOut": false,
+                "duration": 16,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "chai.request(config.server.BASE_PATH)\n    .post(config.api.menuDetail)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n    res.should.have.status(200)\n  response = res\n  done();\n});",
+                "err": {},
+                "isRoot": false,
+                "uuid": "87b2863a-b1c3-4649-9366-27a38fbaf14c",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data property existency check",
+                "fullTitle": "Menu /menu/detail data property existency check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.should.have.property('body');\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "be345e9d-ae5f-4fa2-bdd1-37aa36442a16",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data null check",
+                "fullTitle": "Menu /menu/detail data null check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "expect(response.body).to.not.be.null;\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "5eaf394b-475a-4dae-81ab-92dd239f53fe",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "responseStatus 200 check",
+                "fullTitle": "Menu /menu/detail responseStatus 200 check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "4ce96819-39d3-4915-a715-c3dc15dd37e7",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data check",
+                "fullTitle": "Menu /menu/detail data check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.should.have.property('data').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "fae94f1d-0bd4-4bd1-9455-8d12f3a3e049",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.sub_category_id",
+                "fullTitle": "Menu /menu/detail data.sub_category_id",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "console.log(response.body.data[0].sub_category_id)\nresponse.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "3bfff5b6-f30d-4df7-b461-c61e535d2c64",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.menu_id",
+                "fullTitle": "Menu /menu/detail data.menu_id",
+                "timedOut": false,
+                "duration": 1,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('menu_id').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "7e583fda-5c92-4596-b607-c11e52720941",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.state_id",
+                "fullTitle": "Menu /menu/detail data.state_id",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('stage_id').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "aa075efd-9536-4df5-bab1-3b8ac1e0ea35",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.m_item",
+                "fullTitle": "Menu /menu/detail data.m_item",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('m_item').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "5dfa8374-5645-47b0-91d3-5c431bd0e811",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.m_type",
+                "fullTitle": "Menu /menu/detail data.m_type",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('m_type').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "8cbfe13d-a615-4bb6-b073-52bf34fddca3",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.price",
+                "fullTitle": "Menu /menu/detail data.price",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('price').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "43cc822b-0a31-4d34-8469-64bb7b5a90d9",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.points",
+                "fullTitle": "Menu /menu/detail data.points",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('points')\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "2ad0616a-0230-4ca3-9061-c5c10d1a03e0",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.calory",
+                "fullTitle": "Menu /menu/detail data.calory",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('calory').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "f4c12fa5-e7c0-4d04-b5d8-d01c35aeb86e",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.file_id",
+                "fullTitle": "Menu /menu/detail data.file_id",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('file_id').not.to.be.empty\ndone();",
+                "err": {
+                  "name": "AssertionError",
+                  "message": "expected '' not to be empty",
+                  "showDiff": false,
+                  "actual": "",
+                  "estack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:154:70)",
+                  "stack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:154:70)"
+                },
+                "isRoot": false,
+                "uuid": "964d5600-6620-40f9-a157-e5393058135d",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options null check",
+                "fullTitle": "Menu /menu/detail data.options null check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('options').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "ac431829-6680-4311-b394-6f147193ae75",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.category_id",
+                "fullTitle": "Menu /menu/detail data.options.category_id",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].options[0].should.have.property('category_id').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "fb078117-dace-4e7c-9725-e16548d881d6",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.category_name",
+                "fullTitle": "Menu /menu/detail data.options.category_name",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].options[0].should.have.property('category_name').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "fe37d87c-3da9-4880-bf08-2b85b2c7819c",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.option_type",
+                "fullTitle": "Menu /menu/detail data.options.option_type",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].options[0].should.have.property('option_type').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "da920922-5f0b-4399-b4dd-83887d07a511",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.data null check",
+                "fullTitle": "Menu /menu/detail data.options.data null check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].options[0].should.have.property('data').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "a2f67f79-5d6b-45f0-a9b8-84f039c124ad",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.data.id",
+                "fullTitle": "Menu /menu/detail data.options.data.id",
+                "timedOut": false,
+                "duration": 2,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "response.body.data[0].options[0].data.should.have.property('id').not.to.be.empty\ndone();",
+                "err": {
+                  "name": "AssertionError",
+                  "message": "expected [ Array(2) ] to have a property 'id'",
+                  "showDiff": false,
+                  "actual": [
+                    {
+                      "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+                      "option": "cucumber",
+                      "price": 1,
+                      "checked": true
+                    },
+                    {
+                      "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+                      "option": "onion",
+                      "price": 1
+                    }
+                  ],
+                  "estack": "AssertionError: expected [ Array(2) ] to have a property 'id'\n    at Context.<anonymous> (test/menu.js:178:57)",
+                  "stack": "AssertionError: expected [ Array(2) ] to have a property 'id'\n    at Context.<anonymous> (test/menu.js:178:57)"
+                },
+                "isRoot": false,
+                "uuid": "f7152aa9-2ad8-4e7d-896d-4914dafc9a25",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.data.option",
+                "fullTitle": "Menu /menu/detail data.options.data.option",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "response.body.data[0].options[0].data.should.have.property('option').not.to.be.empty\ndone();",
+                "err": {
+                  "name": "AssertionError",
+                  "message": "expected [ Array(2) ] to have a property 'option'",
+                  "showDiff": false,
+                  "actual": [
+                    {
+                      "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+                      "option": "cucumber",
+                      "price": 1,
+                      "checked": true
+                    },
+                    {
+                      "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+                      "option": "onion",
+                      "price": 1
+                    }
+                  ],
+                  "estack": "AssertionError: expected [ Array(2) ] to have a property 'option'\n    at Context.<anonymous> (test/menu.js:182:57)",
+                  "stack": "AssertionError: expected [ Array(2) ] to have a property 'option'\n    at Context.<anonymous> (test/menu.js:182:57)"
+                },
+                "isRoot": false,
+                "uuid": "864b1ca6-a1a1-44ea-a93a-7c9d32a1444f",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.data.price",
+                "fullTitle": "Menu /menu/detail data.options.data.price",
+                "timedOut": false,
+                "duration": 1,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "response.body.data[0].options[0].data.should.have.property('price').not.to.be.empty\ndone();",
+                "err": {
+                  "name": "AssertionError",
+                  "message": "expected [ Array(2) ] to have a property 'price'",
+                  "showDiff": false,
+                  "actual": [
+                    {
+                      "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+                      "option": "cucumber",
+                      "price": 1,
+                      "checked": true
+                    },
+                    {
+                      "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+                      "option": "onion",
+                      "price": 1
+                    }
+                  ],
+                  "estack": "AssertionError: expected [ Array(2) ] to have a property 'price'\n    at Context.<anonymous> (test/menu.js:186:57)",
+                  "stack": "AssertionError: expected [ Array(2) ] to have a property 'price'\n    at Context.<anonymous> (test/menu.js:186:57)"
+                },
+                "isRoot": false,
+                "uuid": "9c3e0d6a-b06f-4822-9fa5-10332f12094e",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              }
+            ],
+            "pending": [],
+            "root": false,
+            "_timeout": 2000,
+            "file": "/test/menu.js",
+            "uuid": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+            "fullFile": "/Users/bok95/bluehack/apiway/tc/Kiosk-API-test/test/menu.js",
+            "passes": [
+              {
+                "title": "http status 200 check",
+                "fullTitle": "Menu /menu/detail http status 200 check",
+                "timedOut": false,
+                "duration": 16,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "chai.request(config.server.BASE_PATH)\n    .post(config.api.menuDetail)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n    res.should.have.status(200)\n  response = res\n  done();\n});",
+                "err": {},
+                "isRoot": false,
+                "uuid": "87b2863a-b1c3-4649-9366-27a38fbaf14c",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data property existency check",
+                "fullTitle": "Menu /menu/detail data property existency check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.should.have.property('body');\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "be345e9d-ae5f-4fa2-bdd1-37aa36442a16",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data null check",
+                "fullTitle": "Menu /menu/detail data null check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "expect(response.body).to.not.be.null;\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "5eaf394b-475a-4dae-81ab-92dd239f53fe",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "responseStatus 200 check",
+                "fullTitle": "Menu /menu/detail responseStatus 200 check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "4ce96819-39d3-4915-a715-c3dc15dd37e7",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data check",
+                "fullTitle": "Menu /menu/detail data check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.should.have.property('data').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "fae94f1d-0bd4-4bd1-9455-8d12f3a3e049",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.sub_category_id",
+                "fullTitle": "Menu /menu/detail data.sub_category_id",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "console.log(response.body.data[0].sub_category_id)\nresponse.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "3bfff5b6-f30d-4df7-b461-c61e535d2c64",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.menu_id",
+                "fullTitle": "Menu /menu/detail data.menu_id",
+                "timedOut": false,
+                "duration": 1,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('menu_id').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "7e583fda-5c92-4596-b607-c11e52720941",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.state_id",
+                "fullTitle": "Menu /menu/detail data.state_id",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('stage_id').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "aa075efd-9536-4df5-bab1-3b8ac1e0ea35",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.m_item",
+                "fullTitle": "Menu /menu/detail data.m_item",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('m_item').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "5dfa8374-5645-47b0-91d3-5c431bd0e811",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.m_type",
+                "fullTitle": "Menu /menu/detail data.m_type",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('m_type').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "8cbfe13d-a615-4bb6-b073-52bf34fddca3",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.price",
+                "fullTitle": "Menu /menu/detail data.price",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('price').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "43cc822b-0a31-4d34-8469-64bb7b5a90d9",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.points",
+                "fullTitle": "Menu /menu/detail data.points",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('points')\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "2ad0616a-0230-4ca3-9061-c5c10d1a03e0",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.calory",
+                "fullTitle": "Menu /menu/detail data.calory",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('calory').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "f4c12fa5-e7c0-4d04-b5d8-d01c35aeb86e",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options null check",
+                "fullTitle": "Menu /menu/detail data.options null check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('options').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "ac431829-6680-4311-b394-6f147193ae75",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.category_id",
+                "fullTitle": "Menu /menu/detail data.options.category_id",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].options[0].should.have.property('category_id').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "fb078117-dace-4e7c-9725-e16548d881d6",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.category_name",
+                "fullTitle": "Menu /menu/detail data.options.category_name",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].options[0].should.have.property('category_name').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "fe37d87c-3da9-4880-bf08-2b85b2c7819c",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.option_type",
+                "fullTitle": "Menu /menu/detail data.options.option_type",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].options[0].should.have.property('option_type').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "da920922-5f0b-4399-b4dd-83887d07a511",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.data null check",
+                "fullTitle": "Menu /menu/detail data.options.data null check",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "response.body.data[0].options[0].should.have.property('data').not.to.be.empty\ndone();",
+                "err": {},
+                "isRoot": false,
+                "uuid": "a2f67f79-5d6b-45f0-a9b8-84f039c124ad",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              }
+            ],
+            "failures": [
+              {
+                "title": "data.file_id",
+                "fullTitle": "Menu /menu/detail data.file_id",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "response.body.data[0].should.have.property('file_id').not.to.be.empty\ndone();",
+                "err": {
+                  "name": "AssertionError",
+                  "message": "expected '' not to be empty",
+                  "showDiff": false,
+                  "actual": "",
+                  "estack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:154:70)",
+                  "stack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:154:70)"
+                },
+                "isRoot": false,
+                "uuid": "964d5600-6620-40f9-a157-e5393058135d",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.data.id",
+                "fullTitle": "Menu /menu/detail data.options.data.id",
+                "timedOut": false,
+                "duration": 2,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "response.body.data[0].options[0].data.should.have.property('id').not.to.be.empty\ndone();",
+                "err": {
+                  "name": "AssertionError",
+                  "message": "expected [ Array(2) ] to have a property 'id'",
+                  "showDiff": false,
+                  "actual": [
+                    {
+                      "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+                      "option": "cucumber",
+                      "price": 1,
+                      "checked": true
+                    },
+                    {
+                      "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+                      "option": "onion",
+                      "price": 1
+                    }
+                  ],
+                  "estack": "AssertionError: expected [ Array(2) ] to have a property 'id'\n    at Context.<anonymous> (test/menu.js:178:57)",
+                  "stack": "AssertionError: expected [ Array(2) ] to have a property 'id'\n    at Context.<anonymous> (test/menu.js:178:57)"
+                },
+                "isRoot": false,
+                "uuid": "f7152aa9-2ad8-4e7d-896d-4914dafc9a25",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.data.option",
+                "fullTitle": "Menu /menu/detail data.options.data.option",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "response.body.data[0].options[0].data.should.have.property('option').not.to.be.empty\ndone();",
+                "err": {
+                  "name": "AssertionError",
+                  "message": "expected [ Array(2) ] to have a property 'option'",
+                  "showDiff": false,
+                  "actual": [
+                    {
+                      "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+                      "option": "cucumber",
+                      "price": 1,
+                      "checked": true
+                    },
+                    {
+                      "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+                      "option": "onion",
+                      "price": 1
+                    }
+                  ],
+                  "estack": "AssertionError: expected [ Array(2) ] to have a property 'option'\n    at Context.<anonymous> (test/menu.js:182:57)",
+                  "stack": "AssertionError: expected [ Array(2) ] to have a property 'option'\n    at Context.<anonymous> (test/menu.js:182:57)"
+                },
+                "isRoot": false,
+                "uuid": "864b1ca6-a1a1-44ea-a93a-7c9d32a1444f",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              },
+              {
+                "title": "data.options.data.price",
+                "fullTitle": "Menu /menu/detail data.options.data.price",
+                "timedOut": false,
+                "duration": 1,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "response.body.data[0].options[0].data.should.have.property('price').not.to.be.empty\ndone();",
+                "err": {
+                  "name": "AssertionError",
+                  "message": "expected [ Array(2) ] to have a property 'price'",
+                  "showDiff": false,
+                  "actual": [
+                    {
+                      "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+                      "option": "cucumber",
+                      "price": 1,
+                      "checked": true
+                    },
+                    {
+                      "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+                      "option": "onion",
+                      "price": 1
+                    }
+                  ],
+                  "estack": "AssertionError: expected [ Array(2) ] to have a property 'price'\n    at Context.<anonymous> (test/menu.js:186:57)",
+                  "stack": "AssertionError: expected [ Array(2) ] to have a property 'price'\n    at Context.<anonymous> (test/menu.js:186:57)"
+                },
+                "isRoot": false,
+                "uuid": "9c3e0d6a-b06f-4822-9fa5-10332f12094e",
+                "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+                "skipped": false
+              }
+            ],
+            "skipped": [],
+            "hasTests": true,
+            "hasSuites": false,
+            "totalTests": 22,
+            "totalPasses": 18,
+            "totalFailures": 4,
+            "totalPending": 0,
+            "totalSkipped": 0,
+            "hasPasses": true,
+            "hasFailures": true,
+            "hasPending": false,
+            "hasSkipped": false,
+            "duration": 20,
             "rootEmpty": false
           }
         ],
@@ -1240,7 +2138,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/menu.js",
-        "uuid": "f6c9efcb-090a-4a65-9e13-eca2b6d400ff",
+        "uuid": "6812356a-9905-49b5-b00e-a6123b2c0ea1",
         "fullFile": "/Users/bok95/bluehack/apiway/tc/Kiosk-API-test/test/menu.js",
         "passes": [],
         "failures": [],
@@ -1279,8 +2177,8 @@
                 "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.storeAccountList)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "ca1fef84-48dc-4460-82b5-0473d51d1e40",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "5977a274-b9fd-47b9-8f8b-65f15a857363",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1296,8 +2194,8 @@
                 "code": "response.should.have.property('body');\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "36b07c36-f8c8-4064-8279-d9bb945d719d",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "b1cdfeb8-854f-4a13-a1ed-68c1b427e5a3",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1313,8 +2211,8 @@
                 "code": "expect(response.body).to.not.be.null;\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8b017b76-f260-4fab-9578-60948d11f483",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "d1b0ac75-63b5-4772-b97e-efb1fbd23831",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1330,15 +2228,15 @@
                 "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "d5946c24-56bd-4aa6-a9bd-3fde4b25b5d6",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "3a642fd3-53f5-4ce7-8109-f60bd361fcf5",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
                 "title": "data check",
                 "fullTitle": "Store /store/accountList data check",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -1347,8 +2245,8 @@
                 "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "51e9389d-ea5c-4056-8e9d-8f886f0fba20",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "630b0177-43b7-44fc-a7c6-2aafda310e88",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1364,8 +2262,8 @@
                 "code": "console.log('store_id=' + response.body.data[0].store_id)\nresponse.body.data[0].should.have.property('store_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "878b4a98-a067-456b-a33c-d5470e064c55",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "3fe93fb4-1bdb-4d61-9af4-4aba68506705",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1381,8 +2279,8 @@
                 "code": "response.body.data[0].should.have.property('user_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "a716a08c-7b69-4585-942f-158432689bbe",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "f17dff53-e261-4ae8-86ee-94068c7ef431",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1398,8 +2296,8 @@
                 "code": "response.body.data[0].should.have.property('s_phone').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8420d7a0-bf41-4821-91db-a899e3561f98",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "46ebbf51-84b3-4e76-8270-8663ea0bf6a3",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1415,8 +2313,8 @@
                 "code": "response.body.data[0].should.have.property('store').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "633e9f18-a16d-4238-8424-b4c8ca22e0fc",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "ec21aef4-9c61-49c5-838e-29a463cf220b",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1432,8 +2330,8 @@
                 "code": "response.body.data[0].should.have.property('u_level').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "ba9c775a-0707-4688-9195-b5f57905b696",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "6ae372c5-c14f-48b9-a471-9cb7bb6eccd4",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1449,8 +2347,8 @@
                 "code": "response.body.data[0].should.have.property('u_status').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "5c633a41-f466-4273-bb80-5ecbac857d43",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "ba75caa3-dd15-4543-bfb2-dc8ad0639689",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1466,8 +2364,8 @@
                 "code": "response.body.data[0].should.have.property('u_points').not.to.be.NaN\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "5c7a6e94-4f8d-4639-aade-922337119852",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "aa6c806e-1d35-4359-80b9-457c439c1a58",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1483,15 +2381,15 @@
                 "code": "response.body.data[0].should.have.property('store').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "3d9541d4-2635-4c81-825a-f1c03bd1b8ba",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "3aea5f54-7f0e-427f-b8b4-05d37bd0ae4b",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
                 "title": "data.s_logo",
                 "fullTitle": "Store /store/accountList data.s_logo",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
@@ -1501,8 +2399,8 @@
                   "estack": "TypeError: Cannot convert undefined or null to object\n    at Function.keys (<anonymous>)\n    at Assertion.<anonymous> (node_modules/chai/lib/chai/core/assertions.js:420:25)\n    at Assertion.addProperty (node_modules/chai/lib/chai/utils/addProperty.js:43:29)\n    at Context.<anonymous> (test/store.js:80:69)"
                 },
                 "isRoot": false,
-                "uuid": "39b8a120-767a-455f-890a-e92c100c1cff",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "7e3aacb8-bad8-4779-91ca-29fbb3aacd55",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               }
             ],
@@ -1510,7 +2408,7 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/store.js",
-            "uuid": "1a629221-bee0-4614-9b54-542af5987ab6",
+            "uuid": "f8af462f-20ca-45b4-8e81-7ae023c18562",
             "fullFile": "/Users/bok95/bluehack/apiway/tc/Kiosk-API-test/test/store.js",
             "passes": [
               {
@@ -1526,8 +2424,8 @@
                 "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.storeAccountList)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "ca1fef84-48dc-4460-82b5-0473d51d1e40",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "5977a274-b9fd-47b9-8f8b-65f15a857363",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1543,8 +2441,8 @@
                 "code": "response.should.have.property('body');\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "36b07c36-f8c8-4064-8279-d9bb945d719d",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "b1cdfeb8-854f-4a13-a1ed-68c1b427e5a3",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1560,8 +2458,8 @@
                 "code": "expect(response.body).to.not.be.null;\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8b017b76-f260-4fab-9578-60948d11f483",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "d1b0ac75-63b5-4772-b97e-efb1fbd23831",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1577,15 +2475,15 @@
                 "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "d5946c24-56bd-4aa6-a9bd-3fde4b25b5d6",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "3a642fd3-53f5-4ce7-8109-f60bd361fcf5",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
                 "title": "data check",
                 "fullTitle": "Store /store/accountList data check",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -1594,8 +2492,8 @@
                 "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "51e9389d-ea5c-4056-8e9d-8f886f0fba20",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "630b0177-43b7-44fc-a7c6-2aafda310e88",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1611,8 +2509,8 @@
                 "code": "console.log('store_id=' + response.body.data[0].store_id)\nresponse.body.data[0].should.have.property('store_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "878b4a98-a067-456b-a33c-d5470e064c55",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "3fe93fb4-1bdb-4d61-9af4-4aba68506705",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1628,8 +2526,8 @@
                 "code": "response.body.data[0].should.have.property('user_id').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "a716a08c-7b69-4585-942f-158432689bbe",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "f17dff53-e261-4ae8-86ee-94068c7ef431",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1645,8 +2543,8 @@
                 "code": "response.body.data[0].should.have.property('s_phone').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "8420d7a0-bf41-4821-91db-a899e3561f98",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "46ebbf51-84b3-4e76-8270-8663ea0bf6a3",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1662,8 +2560,8 @@
                 "code": "response.body.data[0].should.have.property('store').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "633e9f18-a16d-4238-8424-b4c8ca22e0fc",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "ec21aef4-9c61-49c5-838e-29a463cf220b",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1679,8 +2577,8 @@
                 "code": "response.body.data[0].should.have.property('u_level').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "ba9c775a-0707-4688-9195-b5f57905b696",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "6ae372c5-c14f-48b9-a471-9cb7bb6eccd4",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1696,8 +2594,8 @@
                 "code": "response.body.data[0].should.have.property('u_status').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "5c633a41-f466-4273-bb80-5ecbac857d43",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "ba75caa3-dd15-4543-bfb2-dc8ad0639689",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1713,8 +2611,8 @@
                 "code": "response.body.data[0].should.have.property('u_points').not.to.be.NaN\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "5c7a6e94-4f8d-4639-aade-922337119852",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "aa6c806e-1d35-4359-80b9-457c439c1a58",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               },
               {
@@ -1730,8 +2628,8 @@
                 "code": "response.body.data[0].should.have.property('store').not.to.be.empty\ndone();",
                 "err": {},
                 "isRoot": false,
-                "uuid": "3d9541d4-2635-4c81-825a-f1c03bd1b8ba",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "3aea5f54-7f0e-427f-b8b4-05d37bd0ae4b",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               }
             ],
@@ -1740,7 +2638,7 @@
                 "title": "data.s_logo",
                 "fullTitle": "Store /store/accountList data.s_logo",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
@@ -1750,8 +2648,8 @@
                   "estack": "TypeError: Cannot convert undefined or null to object\n    at Function.keys (<anonymous>)\n    at Assertion.<anonymous> (node_modules/chai/lib/chai/core/assertions.js:420:25)\n    at Assertion.addProperty (node_modules/chai/lib/chai/utils/addProperty.js:43:29)\n    at Context.<anonymous> (test/store.js:80:69)"
                 },
                 "isRoot": false,
-                "uuid": "39b8a120-767a-455f-890a-e92c100c1cff",
-                "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+                "uuid": "7e3aacb8-bad8-4779-91ca-29fbb3aacd55",
+                "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
                 "skipped": false
               }
             ],
@@ -1776,7 +2674,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/store.js",
-        "uuid": "09b96aa8-a226-412f-a2e4-6e775f02dc36",
+        "uuid": "d3eaed13-6ec2-4d6f-9773-cf05bd5797df",
         "fullFile": "/Users/bok95/bluehack/apiway/tc/Kiosk-API-test/test/store.js",
         "passes": [],
         "failures": [],
@@ -1800,7 +2698,7 @@
     "pending": [],
     "root": true,
     "_timeout": 2000,
-    "uuid": "26013a96-5d43-478f-a4b4-d6ed635193d3",
+    "uuid": "ca6b890a-2462-416d-a2ae-33465e1ad474",
     "fullFile": "",
     "file": "",
     "passes": [],
@@ -1825,7 +2723,7 @@
       "title": "http status 200 check",
       "fullTitle": "/account/login http status 200 check",
       "timedOut": false,
-      "duration": 31,
+      "duration": 34,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -1834,15 +2732,15 @@
       "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.accountLogin)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
       "err": {},
       "isRoot": false,
-      "uuid": "25574097-cd2e-4a81-847c-9a62ce280e99",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "bd4d8d94-f901-46ed-aa14-174150db6edb",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
       "title": "data property existency check",
       "fullTitle": "/account/login data property existency check",
       "timedOut": false,
-      "duration": 1,
+      "duration": 0,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -1851,15 +2749,15 @@
       "code": "response.should.have.property('body');\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "2d7b3cf5-e0c3-4420-a307-55da9faa3d8b",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "4bd88829-5301-4231-8d3f-6f70be2a4829",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
       "title": "data null check",
       "fullTitle": "/account/login data null check",
       "timedOut": false,
-      "duration": 0,
+      "duration": 1,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -1868,15 +2766,15 @@
       "code": "expect(response.body).to.not.be.null;\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "180fec35-5c35-4e65-b018-3b138d8017b4",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "412c3cdd-df9f-4880-b91b-486afbbf3b88",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
       "title": "responseStatus 200 check",
       "fullTitle": "/account/login responseStatus 200 check",
       "timedOut": false,
-      "duration": 1,
+      "duration": 0,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -1885,15 +2783,15 @@
       "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "a5e7a26f-ade6-44fc-a2e2-40be9d973bb7",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "e37ad7e9-4812-4d5b-bef5-a19b02a3d6ed",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
       "title": "data check",
       "fullTitle": "/account/login data check",
       "timedOut": false,
-      "duration": 0,
+      "duration": 1,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -1902,8 +2800,8 @@
       "code": "response.body.should.have.property('data').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "cf4d76ab-bad7-4aa9-8098-2847b48febcb",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "6544628c-55e0-4110-a355-57329558ce7d",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
@@ -1919,8 +2817,8 @@
       "code": "response.body.data[0].should.have.property('account_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "88791e5c-590c-4686-b68a-2ee3260b42f1",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "90da6ad5-a97b-4886-9b29-be225f39daeb",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
@@ -1936,8 +2834,8 @@
       "code": "response.body.data[0].should.have.property('name').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "00c327b3-312a-41f9-981f-c37c5251adc6",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "684e5f9c-7b74-4cdf-97ba-033a8643c67e",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
@@ -1953,15 +2851,15 @@
       "code": "response.body.data[0].should.have.property('phone').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "9564832e-1b72-48b9-ad4a-9e98b8399662",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "9b739d5e-141c-4ec7-b2fc-1d260603a53e",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
       "title": "data.status",
       "fullTitle": "/account/login data.status",
       "timedOut": false,
-      "duration": 0,
+      "duration": 1,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -1970,8 +2868,8 @@
       "code": "response.body.data[0].should.have.property('status').not.to.be.NaN\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "b2a87878-98ad-4a64-8f95-d2314a468df1",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "ef4555e9-f2d1-465e-b7b6-c5b74f4e6994",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
@@ -1987,8 +2885,8 @@
       "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.categoryListMenu)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
       "err": {},
       "isRoot": false,
-      "uuid": "7ae53ad2-4c6f-4851-beb6-98a85eea4d7a",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "ed92a941-9aaf-4b32-8921-e04df6e7e1ba",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
@@ -2004,8 +2902,8 @@
       "code": "response.should.have.property('body');\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8f87b77e-bf33-4d90-b62d-40891b4be15f",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "f95c4cdf-dd7b-4b41-a079-82afe2242565",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
@@ -2021,8 +2919,8 @@
       "code": "expect(response.body).to.not.be.null;\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "bf99aaeb-f44d-4f78-aa58-77e297865e6a",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "2eed78de-f5b8-449a-9d82-eda9987e28a3",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
@@ -2038,15 +2936,15 @@
       "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "39c6fa49-75a7-4fdd-a37a-6d9468bb17a1",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "88233e98-7034-4a66-a0a8-53fbd42d34fe",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
       "title": "data check",
       "fullTitle": "/category/list-menu data check",
       "timedOut": false,
-      "duration": 4,
+      "duration": 3,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2055,8 +2953,8 @@
       "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "94b8488f-74bd-46bf-acc0-dbc951dbb915",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "d915f2a8-347a-4613-b299-dae04461e89a",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
@@ -2072,8 +2970,8 @@
       "code": "response.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8cd8d184-e044-405b-a3e2-336ce77661e6",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "3b3bc127-1422-48bd-8d60-0ecd52edc10d",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
@@ -2089,15 +2987,15 @@
       "code": "response.body.data[0].should.have.property('sub_category_name').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "45f0c233-9e78-4699-a575-0ba5fda83106",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "4bcf81fe-76c7-4825-8827-dee9e1c57eff",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
       "title": "http status 200 check",
       "fullTitle": "/menu/list http status 200 check",
       "timedOut": false,
-      "duration": 21,
+      "duration": 17,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2106,8 +3004,8 @@
       "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.menuList)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
       "err": {},
       "isRoot": false,
-      "uuid": "78105294-b330-4875-9c9a-0e0dcfb94d41",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "03e84ab4-f354-4ff4-9238-3ae712e4c345",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2123,8 +3021,8 @@
       "code": "response.should.have.property('body');\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "ef45cadd-03ee-43db-870a-0db22a86dfd0",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "41fd33b0-cf77-4985-9acd-2f2e18ee9c57",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2140,8 +3038,8 @@
       "code": "expect(response.body).to.not.be.null;\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "bf3ee18a-d114-44cd-acad-824428c76722",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "44d485c7-ef0d-4887-96c8-824a23e24141",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2157,25 +3055,25 @@
       "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "617af1df-d72d-40d2-b0d0-0d4b1c9e8ac7",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "054c0868-0be2-4940-af43-ddeac8f75df3",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
       "title": "data check",
       "fullTitle": "/menu/list data check",
       "timedOut": false,
-      "duration": 4,
+      "duration": 0,
       "state": "passed",
       "speed": "fast",
       "pass": true,
       "fail": false,
       "pending": false,
-      "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
+      "code": "// console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "82ce2f0f-dea5-44b9-a6b1-6e885737648d",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "6c12bef6-7152-4ecc-aae5-0bee327f78b0",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2191,8 +3089,8 @@
       "code": "console.log(response.body.data[0].sub_category_id)\nresponse.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "819cae28-a0b0-42fe-9d5c-da9f5235480d",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "343c1dd3-4571-40df-b523-52f5a741afd8",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2208,8 +3106,8 @@
       "code": "response.body.data[0].should.have.property('menu_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "ef93ef04-f1e6-4b75-a515-77906ba301b4",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "3d646741-8224-41dd-bea9-d55c073eb65b",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2225,8 +3123,8 @@
       "code": "response.body.data[0].should.have.property('stage_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "1d308d57-10af-4d3f-8205-bf4177ba1533",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "a8bb8be7-6ffc-425e-9833-97ec602632e1",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2242,8 +3140,8 @@
       "code": "response.body.data[0].should.have.property('m_item').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8f6f094b-633b-490b-a282-61e503c8ff28",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "c89da015-be16-4afa-8f31-724744d70b0b",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2259,8 +3157,8 @@
       "code": "response.body.data[0].should.have.property('m_type').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "f5bfa088-3255-438c-ad79-0693800c4638",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "bbb9e709-31fc-405a-bedc-23ea79641761",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2276,8 +3174,8 @@
       "code": "response.body.data[0].should.have.property('price').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8fe3a573-a901-4afa-9d7b-845144f7717e",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "de58f07f-d158-4c92-9d57-66ec9730ffb6",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2293,8 +3191,8 @@
       "code": "response.body.data[0].should.have.property('points')\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "5d5bd785-3022-47e8-81f8-17b8a285ef7a",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "415b8318-cc8d-4cff-a323-7cab55aef06c",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2310,8 +3208,8 @@
       "code": "response.body.data[0].should.have.property('calory').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "88874c54-325c-4188-9698-7bd0bf73d3bf",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "cd721e03-7d7b-48b5-95ff-255446819d45",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2327,15 +3225,15 @@
       "code": "response.body.data[0].should.have.property('use_YN').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "77626b18-d872-4739-b44d-e4f5f5a645b7",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "edea1fcf-89a5-48f1-acad-a693912b379b",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
       "title": "data.file_id",
       "fullTitle": "/menu/list data.file_id",
       "timedOut": false,
-      "duration": 1,
+      "duration": 2,
       "state": "failed",
       "pass": false,
       "fail": true,
@@ -2350,8 +3248,442 @@
         "stack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:83:70)"
       },
       "isRoot": false,
-      "uuid": "777e1608-7f24-4805-a63f-2c9b5d194cc8",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "3aebab16-0efd-4df3-b560-c34129d6980e",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
+      "skipped": false
+    },
+    {
+      "title": "http status 200 check",
+      "fullTitle": "/menu/detail http status 200 check",
+      "timedOut": false,
+      "duration": 16,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "chai.request(config.server.BASE_PATH)\n    .post(config.api.menuDetail)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n    res.should.have.status(200)\n  response = res\n  done();\n});",
+      "err": {},
+      "isRoot": false,
+      "uuid": "87b2863a-b1c3-4649-9366-27a38fbaf14c",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data property existency check",
+      "fullTitle": "/menu/detail data property existency check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.should.have.property('body');\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "be345e9d-ae5f-4fa2-bdd1-37aa36442a16",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data null check",
+      "fullTitle": "/menu/detail data null check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "expect(response.body).to.not.be.null;\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "5eaf394b-475a-4dae-81ab-92dd239f53fe",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "responseStatus 200 check",
+      "fullTitle": "/menu/detail responseStatus 200 check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "4ce96819-39d3-4915-a715-c3dc15dd37e7",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data check",
+      "fullTitle": "/menu/detail data check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.should.have.property('data').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "fae94f1d-0bd4-4bd1-9455-8d12f3a3e049",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.sub_category_id",
+      "fullTitle": "/menu/detail data.sub_category_id",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "console.log(response.body.data[0].sub_category_id)\nresponse.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "3bfff5b6-f30d-4df7-b461-c61e535d2c64",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.menu_id",
+      "fullTitle": "/menu/detail data.menu_id",
+      "timedOut": false,
+      "duration": 1,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('menu_id').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "7e583fda-5c92-4596-b607-c11e52720941",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.state_id",
+      "fullTitle": "/menu/detail data.state_id",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('stage_id').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "aa075efd-9536-4df5-bab1-3b8ac1e0ea35",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.m_item",
+      "fullTitle": "/menu/detail data.m_item",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('m_item').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "5dfa8374-5645-47b0-91d3-5c431bd0e811",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.m_type",
+      "fullTitle": "/menu/detail data.m_type",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('m_type').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "8cbfe13d-a615-4bb6-b073-52bf34fddca3",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.price",
+      "fullTitle": "/menu/detail data.price",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('price').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "43cc822b-0a31-4d34-8469-64bb7b5a90d9",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.points",
+      "fullTitle": "/menu/detail data.points",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('points')\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "2ad0616a-0230-4ca3-9061-c5c10d1a03e0",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.calory",
+      "fullTitle": "/menu/detail data.calory",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('calory').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "f4c12fa5-e7c0-4d04-b5d8-d01c35aeb86e",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.file_id",
+      "fullTitle": "/menu/detail data.file_id",
+      "timedOut": false,
+      "duration": 0,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('file_id').not.to.be.empty\ndone();",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected '' not to be empty",
+        "showDiff": false,
+        "actual": "",
+        "estack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:154:70)",
+        "stack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:154:70)"
+      },
+      "isRoot": false,
+      "uuid": "964d5600-6620-40f9-a157-e5393058135d",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options null check",
+      "fullTitle": "/menu/detail data.options null check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('options').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "ac431829-6680-4311-b394-6f147193ae75",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.category_id",
+      "fullTitle": "/menu/detail data.options.category_id",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].options[0].should.have.property('category_id').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "fb078117-dace-4e7c-9725-e16548d881d6",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.category_name",
+      "fullTitle": "/menu/detail data.options.category_name",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].options[0].should.have.property('category_name').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "fe37d87c-3da9-4880-bf08-2b85b2c7819c",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.option_type",
+      "fullTitle": "/menu/detail data.options.option_type",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].options[0].should.have.property('option_type').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "da920922-5f0b-4399-b4dd-83887d07a511",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.data null check",
+      "fullTitle": "/menu/detail data.options.data null check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].options[0].should.have.property('data').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "a2f67f79-5d6b-45f0-a9b8-84f039c124ad",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.data.id",
+      "fullTitle": "/menu/detail data.options.data.id",
+      "timedOut": false,
+      "duration": 2,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "code": "response.body.data[0].options[0].data.should.have.property('id').not.to.be.empty\ndone();",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected [ Array(2) ] to have a property 'id'",
+        "showDiff": false,
+        "actual": [
+          {
+            "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+            "option": "cucumber",
+            "price": 1,
+            "checked": true
+          },
+          {
+            "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+            "option": "onion",
+            "price": 1
+          }
+        ],
+        "estack": "AssertionError: expected [ Array(2) ] to have a property 'id'\n    at Context.<anonymous> (test/menu.js:178:57)",
+        "stack": "AssertionError: expected [ Array(2) ] to have a property 'id'\n    at Context.<anonymous> (test/menu.js:178:57)"
+      },
+      "isRoot": false,
+      "uuid": "f7152aa9-2ad8-4e7d-896d-4914dafc9a25",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.data.option",
+      "fullTitle": "/menu/detail data.options.data.option",
+      "timedOut": false,
+      "duration": 0,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "code": "response.body.data[0].options[0].data.should.have.property('option').not.to.be.empty\ndone();",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected [ Array(2) ] to have a property 'option'",
+        "showDiff": false,
+        "actual": [
+          {
+            "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+            "option": "cucumber",
+            "price": 1,
+            "checked": true
+          },
+          {
+            "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+            "option": "onion",
+            "price": 1
+          }
+        ],
+        "estack": "AssertionError: expected [ Array(2) ] to have a property 'option'\n    at Context.<anonymous> (test/menu.js:182:57)",
+        "stack": "AssertionError: expected [ Array(2) ] to have a property 'option'\n    at Context.<anonymous> (test/menu.js:182:57)"
+      },
+      "isRoot": false,
+      "uuid": "864b1ca6-a1a1-44ea-a93a-7c9d32a1444f",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.data.price",
+      "fullTitle": "/menu/detail data.options.data.price",
+      "timedOut": false,
+      "duration": 1,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "code": "response.body.data[0].options[0].data.should.have.property('price').not.to.be.empty\ndone();",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected [ Array(2) ] to have a property 'price'",
+        "showDiff": false,
+        "actual": [
+          {
+            "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+            "option": "cucumber",
+            "price": 1,
+            "checked": true
+          },
+          {
+            "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+            "option": "onion",
+            "price": 1
+          }
+        ],
+        "estack": "AssertionError: expected [ Array(2) ] to have a property 'price'\n    at Context.<anonymous> (test/menu.js:186:57)",
+        "stack": "AssertionError: expected [ Array(2) ] to have a property 'price'\n    at Context.<anonymous> (test/menu.js:186:57)"
+      },
+      "isRoot": false,
+      "uuid": "9c3e0d6a-b06f-4822-9fa5-10332f12094e",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
       "skipped": false
     },
     {
@@ -2367,8 +3699,8 @@
       "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.storeAccountList)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
       "err": {},
       "isRoot": false,
-      "uuid": "ca1fef84-48dc-4460-82b5-0473d51d1e40",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "5977a274-b9fd-47b9-8f8b-65f15a857363",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2384,8 +3716,8 @@
       "code": "response.should.have.property('body');\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "36b07c36-f8c8-4064-8279-d9bb945d719d",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "b1cdfeb8-854f-4a13-a1ed-68c1b427e5a3",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2401,8 +3733,8 @@
       "code": "expect(response.body).to.not.be.null;\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8b017b76-f260-4fab-9578-60948d11f483",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "d1b0ac75-63b5-4772-b97e-efb1fbd23831",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2418,15 +3750,15 @@
       "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "d5946c24-56bd-4aa6-a9bd-3fde4b25b5d6",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "3a642fd3-53f5-4ce7-8109-f60bd361fcf5",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
       "title": "data check",
       "fullTitle": "/store/accountList data check",
       "timedOut": false,
-      "duration": 0,
+      "duration": 1,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2435,8 +3767,8 @@
       "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "51e9389d-ea5c-4056-8e9d-8f886f0fba20",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "630b0177-43b7-44fc-a7c6-2aafda310e88",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2452,8 +3784,8 @@
       "code": "console.log('store_id=' + response.body.data[0].store_id)\nresponse.body.data[0].should.have.property('store_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "878b4a98-a067-456b-a33c-d5470e064c55",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "3fe93fb4-1bdb-4d61-9af4-4aba68506705",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2469,8 +3801,8 @@
       "code": "response.body.data[0].should.have.property('user_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "a716a08c-7b69-4585-942f-158432689bbe",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "f17dff53-e261-4ae8-86ee-94068c7ef431",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2486,8 +3818,8 @@
       "code": "response.body.data[0].should.have.property('s_phone').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8420d7a0-bf41-4821-91db-a899e3561f98",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "46ebbf51-84b3-4e76-8270-8663ea0bf6a3",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2503,8 +3835,8 @@
       "code": "response.body.data[0].should.have.property('store').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "633e9f18-a16d-4238-8424-b4c8ca22e0fc",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "ec21aef4-9c61-49c5-838e-29a463cf220b",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2520,8 +3852,8 @@
       "code": "response.body.data[0].should.have.property('u_level').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "ba9c775a-0707-4688-9195-b5f57905b696",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "6ae372c5-c14f-48b9-a471-9cb7bb6eccd4",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2537,8 +3869,8 @@
       "code": "response.body.data[0].should.have.property('u_status').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "5c633a41-f466-4273-bb80-5ecbac857d43",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "ba75caa3-dd15-4543-bfb2-dc8ad0639689",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2554,8 +3886,8 @@
       "code": "response.body.data[0].should.have.property('u_points').not.to.be.NaN\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "5c7a6e94-4f8d-4639-aade-922337119852",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "aa6c806e-1d35-4359-80b9-457c439c1a58",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -2571,15 +3903,15 @@
       "code": "response.body.data[0].should.have.property('store').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "3d9541d4-2635-4c81-825a-f1c03bd1b8ba",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "3aea5f54-7f0e-427f-b8b4-05d37bd0ae4b",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
       "title": "data.s_logo",
       "fullTitle": "/store/accountList data.s_logo",
       "timedOut": false,
-      "duration": 1,
+      "duration": 0,
       "state": "failed",
       "pass": false,
       "fail": true,
@@ -2589,8 +3921,8 @@
         "estack": "TypeError: Cannot convert undefined or null to object\n    at Function.keys (<anonymous>)\n    at Assertion.<anonymous> (node_modules/chai/lib/chai/core/assertions.js:420:25)\n    at Assertion.addProperty (node_modules/chai/lib/chai/utils/addProperty.js:43:29)\n    at Context.<anonymous> (test/store.js:80:69)"
       },
       "isRoot": false,
-      "uuid": "39b8a120-767a-455f-890a-e92c100c1cff",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "7e3aacb8-bad8-4779-91ca-29fbb3aacd55",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     }
   ],
@@ -2600,7 +3932,7 @@
       "title": "http status 200 check",
       "fullTitle": "/account/login http status 200 check",
       "timedOut": false,
-      "duration": 31,
+      "duration": 34,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2609,15 +3941,15 @@
       "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.accountLogin)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
       "err": {},
       "isRoot": false,
-      "uuid": "25574097-cd2e-4a81-847c-9a62ce280e99",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "bd4d8d94-f901-46ed-aa14-174150db6edb",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
       "title": "data property existency check",
       "fullTitle": "/account/login data property existency check",
       "timedOut": false,
-      "duration": 1,
+      "duration": 0,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2626,15 +3958,15 @@
       "code": "response.should.have.property('body');\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "2d7b3cf5-e0c3-4420-a307-55da9faa3d8b",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "4bd88829-5301-4231-8d3f-6f70be2a4829",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
       "title": "data null check",
       "fullTitle": "/account/login data null check",
       "timedOut": false,
-      "duration": 0,
+      "duration": 1,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2643,15 +3975,15 @@
       "code": "expect(response.body).to.not.be.null;\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "180fec35-5c35-4e65-b018-3b138d8017b4",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "412c3cdd-df9f-4880-b91b-486afbbf3b88",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
       "title": "responseStatus 200 check",
       "fullTitle": "/account/login responseStatus 200 check",
       "timedOut": false,
-      "duration": 1,
+      "duration": 0,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2660,15 +3992,15 @@
       "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "a5e7a26f-ade6-44fc-a2e2-40be9d973bb7",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "e37ad7e9-4812-4d5b-bef5-a19b02a3d6ed",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
       "title": "data check",
       "fullTitle": "/account/login data check",
       "timedOut": false,
-      "duration": 0,
+      "duration": 1,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2677,8 +4009,8 @@
       "code": "response.body.should.have.property('data').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "cf4d76ab-bad7-4aa9-8098-2847b48febcb",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "6544628c-55e0-4110-a355-57329558ce7d",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
@@ -2694,8 +4026,8 @@
       "code": "response.body.data[0].should.have.property('account_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "88791e5c-590c-4686-b68a-2ee3260b42f1",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "90da6ad5-a97b-4886-9b29-be225f39daeb",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
@@ -2711,8 +4043,8 @@
       "code": "response.body.data[0].should.have.property('name').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "00c327b3-312a-41f9-981f-c37c5251adc6",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "684e5f9c-7b74-4cdf-97ba-033a8643c67e",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
@@ -2728,15 +4060,15 @@
       "code": "response.body.data[0].should.have.property('phone').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "9564832e-1b72-48b9-ad4a-9e98b8399662",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "9b739d5e-141c-4ec7-b2fc-1d260603a53e",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
       "title": "data.status",
       "fullTitle": "/account/login data.status",
       "timedOut": false,
-      "duration": 0,
+      "duration": 1,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2745,8 +4077,8 @@
       "code": "response.body.data[0].should.have.property('status').not.to.be.NaN\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "b2a87878-98ad-4a64-8f95-d2314a468df1",
-      "parentUUID": "c34d4c29-13af-445c-8d0c-d805ed2ab879",
+      "uuid": "ef4555e9-f2d1-465e-b7b6-c5b74f4e6994",
+      "parentUUID": "9e5682f9-4ac4-428f-9362-23177fe1613f",
       "skipped": false
     },
     {
@@ -2762,8 +4094,8 @@
       "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.categoryListMenu)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
       "err": {},
       "isRoot": false,
-      "uuid": "7ae53ad2-4c6f-4851-beb6-98a85eea4d7a",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "ed92a941-9aaf-4b32-8921-e04df6e7e1ba",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
@@ -2779,8 +4111,8 @@
       "code": "response.should.have.property('body');\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8f87b77e-bf33-4d90-b62d-40891b4be15f",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "f95c4cdf-dd7b-4b41-a079-82afe2242565",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
@@ -2796,8 +4128,8 @@
       "code": "expect(response.body).to.not.be.null;\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "bf99aaeb-f44d-4f78-aa58-77e297865e6a",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "2eed78de-f5b8-449a-9d82-eda9987e28a3",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
@@ -2813,15 +4145,15 @@
       "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "39c6fa49-75a7-4fdd-a37a-6d9468bb17a1",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "88233e98-7034-4a66-a0a8-53fbd42d34fe",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
       "title": "data check",
       "fullTitle": "/category/list-menu data check",
       "timedOut": false,
-      "duration": 4,
+      "duration": 3,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2830,8 +4162,8 @@
       "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "94b8488f-74bd-46bf-acc0-dbc951dbb915",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "d915f2a8-347a-4613-b299-dae04461e89a",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
@@ -2847,8 +4179,8 @@
       "code": "response.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8cd8d184-e044-405b-a3e2-336ce77661e6",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "3b3bc127-1422-48bd-8d60-0ecd52edc10d",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
@@ -2864,15 +4196,15 @@
       "code": "response.body.data[0].should.have.property('sub_category_name').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "45f0c233-9e78-4699-a575-0ba5fda83106",
-      "parentUUID": "b5b23343-d72a-4773-bd51-9539da09379f",
+      "uuid": "4bcf81fe-76c7-4825-8827-dee9e1c57eff",
+      "parentUUID": "1cbe7f87-2c08-461c-9201-1b073622d360",
       "skipped": false
     },
     {
       "title": "http status 200 check",
       "fullTitle": "/menu/list http status 200 check",
       "timedOut": false,
-      "duration": 21,
+      "duration": 17,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2881,8 +4213,8 @@
       "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.menuList)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
       "err": {},
       "isRoot": false,
-      "uuid": "78105294-b330-4875-9c9a-0e0dcfb94d41",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "03e84ab4-f354-4ff4-9238-3ae712e4c345",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2898,8 +4230,8 @@
       "code": "response.should.have.property('body');\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "ef45cadd-03ee-43db-870a-0db22a86dfd0",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "41fd33b0-cf77-4985-9acd-2f2e18ee9c57",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2915,8 +4247,8 @@
       "code": "expect(response.body).to.not.be.null;\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "bf3ee18a-d114-44cd-acad-824428c76722",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "44d485c7-ef0d-4887-96c8-824a23e24141",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2932,25 +4264,25 @@
       "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "617af1df-d72d-40d2-b0d0-0d4b1c9e8ac7",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "054c0868-0be2-4940-af43-ddeac8f75df3",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
       "title": "data check",
       "fullTitle": "/menu/list data check",
       "timedOut": false,
-      "duration": 4,
+      "duration": 0,
       "state": "passed",
       "speed": "fast",
       "pass": true,
       "fail": false,
       "pending": false,
-      "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
+      "code": "// console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "82ce2f0f-dea5-44b9-a6b1-6e885737648d",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "6c12bef6-7152-4ecc-aae5-0bee327f78b0",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2966,8 +4298,8 @@
       "code": "console.log(response.body.data[0].sub_category_id)\nresponse.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "819cae28-a0b0-42fe-9d5c-da9f5235480d",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "343c1dd3-4571-40df-b523-52f5a741afd8",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -2983,8 +4315,8 @@
       "code": "response.body.data[0].should.have.property('menu_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "ef93ef04-f1e6-4b75-a515-77906ba301b4",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "3d646741-8224-41dd-bea9-d55c073eb65b",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -3000,8 +4332,8 @@
       "code": "response.body.data[0].should.have.property('stage_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "1d308d57-10af-4d3f-8205-bf4177ba1533",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "a8bb8be7-6ffc-425e-9833-97ec602632e1",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -3017,8 +4349,8 @@
       "code": "response.body.data[0].should.have.property('m_item').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8f6f094b-633b-490b-a282-61e503c8ff28",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "c89da015-be16-4afa-8f31-724744d70b0b",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -3034,8 +4366,8 @@
       "code": "response.body.data[0].should.have.property('m_type').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "f5bfa088-3255-438c-ad79-0693800c4638",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "bbb9e709-31fc-405a-bedc-23ea79641761",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -3051,8 +4383,8 @@
       "code": "response.body.data[0].should.have.property('price').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8fe3a573-a901-4afa-9d7b-845144f7717e",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "de58f07f-d158-4c92-9d57-66ec9730ffb6",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -3068,8 +4400,8 @@
       "code": "response.body.data[0].should.have.property('points')\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "5d5bd785-3022-47e8-81f8-17b8a285ef7a",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "415b8318-cc8d-4cff-a323-7cab55aef06c",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -3085,8 +4417,8 @@
       "code": "response.body.data[0].should.have.property('calory').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "88874c54-325c-4188-9698-7bd0bf73d3bf",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "cd721e03-7d7b-48b5-95ff-255446819d45",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
       "skipped": false
     },
     {
@@ -3102,8 +4434,314 @@
       "code": "response.body.data[0].should.have.property('use_YN').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "77626b18-d872-4739-b44d-e4f5f5a645b7",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "edea1fcf-89a5-48f1-acad-a693912b379b",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
+      "skipped": false
+    },
+    {
+      "title": "http status 200 check",
+      "fullTitle": "/menu/detail http status 200 check",
+      "timedOut": false,
+      "duration": 16,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "chai.request(config.server.BASE_PATH)\n    .post(config.api.menuDetail)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n    res.should.have.status(200)\n  response = res\n  done();\n});",
+      "err": {},
+      "isRoot": false,
+      "uuid": "87b2863a-b1c3-4649-9366-27a38fbaf14c",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data property existency check",
+      "fullTitle": "/menu/detail data property existency check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.should.have.property('body');\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "be345e9d-ae5f-4fa2-bdd1-37aa36442a16",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data null check",
+      "fullTitle": "/menu/detail data null check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "expect(response.body).to.not.be.null;\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "5eaf394b-475a-4dae-81ab-92dd239f53fe",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "responseStatus 200 check",
+      "fullTitle": "/menu/detail responseStatus 200 check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "4ce96819-39d3-4915-a715-c3dc15dd37e7",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data check",
+      "fullTitle": "/menu/detail data check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.should.have.property('data').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "fae94f1d-0bd4-4bd1-9455-8d12f3a3e049",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.sub_category_id",
+      "fullTitle": "/menu/detail data.sub_category_id",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "console.log(response.body.data[0].sub_category_id)\nresponse.body.data[0].should.have.property('sub_category_id').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "3bfff5b6-f30d-4df7-b461-c61e535d2c64",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.menu_id",
+      "fullTitle": "/menu/detail data.menu_id",
+      "timedOut": false,
+      "duration": 1,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('menu_id').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "7e583fda-5c92-4596-b607-c11e52720941",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.state_id",
+      "fullTitle": "/menu/detail data.state_id",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('stage_id').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "aa075efd-9536-4df5-bab1-3b8ac1e0ea35",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.m_item",
+      "fullTitle": "/menu/detail data.m_item",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('m_item').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "5dfa8374-5645-47b0-91d3-5c431bd0e811",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.m_type",
+      "fullTitle": "/menu/detail data.m_type",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('m_type').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "8cbfe13d-a615-4bb6-b073-52bf34fddca3",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.price",
+      "fullTitle": "/menu/detail data.price",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('price').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "43cc822b-0a31-4d34-8469-64bb7b5a90d9",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.points",
+      "fullTitle": "/menu/detail data.points",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('points')\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "2ad0616a-0230-4ca3-9061-c5c10d1a03e0",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.calory",
+      "fullTitle": "/menu/detail data.calory",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('calory').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "f4c12fa5-e7c0-4d04-b5d8-d01c35aeb86e",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options null check",
+      "fullTitle": "/menu/detail data.options null check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('options').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "ac431829-6680-4311-b394-6f147193ae75",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.category_id",
+      "fullTitle": "/menu/detail data.options.category_id",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].options[0].should.have.property('category_id').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "fb078117-dace-4e7c-9725-e16548d881d6",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.category_name",
+      "fullTitle": "/menu/detail data.options.category_name",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].options[0].should.have.property('category_name').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "fe37d87c-3da9-4880-bf08-2b85b2c7819c",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.option_type",
+      "fullTitle": "/menu/detail data.options.option_type",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].options[0].should.have.property('option_type').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "da920922-5f0b-4399-b4dd-83887d07a511",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.data null check",
+      "fullTitle": "/menu/detail data.options.data null check",
+      "timedOut": false,
+      "duration": 0,
+      "state": "passed",
+      "speed": "fast",
+      "pass": true,
+      "fail": false,
+      "pending": false,
+      "code": "response.body.data[0].options[0].should.have.property('data').not.to.be.empty\ndone();",
+      "err": {},
+      "isRoot": false,
+      "uuid": "a2f67f79-5d6b-45f0-a9b8-84f039c124ad",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
       "skipped": false
     },
     {
@@ -3119,8 +4757,8 @@
       "code": "chai.request(config.server.BASE_PATH)\n.post(config.api.storeAccountList)\n    .set('content-type', 'application/json')\n    .send(body)\n    .end((err, res) => {\n        res.should.have.status(200)\n        response = res\n        done();\n});",
       "err": {},
       "isRoot": false,
-      "uuid": "ca1fef84-48dc-4460-82b5-0473d51d1e40",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "5977a274-b9fd-47b9-8f8b-65f15a857363",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3136,8 +4774,8 @@
       "code": "response.should.have.property('body');\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "36b07c36-f8c8-4064-8279-d9bb945d719d",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "b1cdfeb8-854f-4a13-a1ed-68c1b427e5a3",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3153,8 +4791,8 @@
       "code": "expect(response.body).to.not.be.null;\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8b017b76-f260-4fab-9578-60948d11f483",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "d1b0ac75-63b5-4772-b97e-efb1fbd23831",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3170,15 +4808,15 @@
       "code": "response.body.should.have.property('responseStatus').eql(200)\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "d5946c24-56bd-4aa6-a9bd-3fde4b25b5d6",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "3a642fd3-53f5-4ce7-8109-f60bd361fcf5",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
       "title": "data check",
       "fullTitle": "/store/accountList data check",
       "timedOut": false,
-      "duration": 0,
+      "duration": 1,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -3187,8 +4825,8 @@
       "code": "console.log(response.body.data)\nresponse.body.should.have.property('data').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "51e9389d-ea5c-4056-8e9d-8f886f0fba20",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "630b0177-43b7-44fc-a7c6-2aafda310e88",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3204,8 +4842,8 @@
       "code": "console.log('store_id=' + response.body.data[0].store_id)\nresponse.body.data[0].should.have.property('store_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "878b4a98-a067-456b-a33c-d5470e064c55",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "3fe93fb4-1bdb-4d61-9af4-4aba68506705",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3221,8 +4859,8 @@
       "code": "response.body.data[0].should.have.property('user_id').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "a716a08c-7b69-4585-942f-158432689bbe",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "f17dff53-e261-4ae8-86ee-94068c7ef431",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3238,8 +4876,8 @@
       "code": "response.body.data[0].should.have.property('s_phone').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "8420d7a0-bf41-4821-91db-a899e3561f98",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "46ebbf51-84b3-4e76-8270-8663ea0bf6a3",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3255,8 +4893,8 @@
       "code": "response.body.data[0].should.have.property('store').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "633e9f18-a16d-4238-8424-b4c8ca22e0fc",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "ec21aef4-9c61-49c5-838e-29a463cf220b",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3272,8 +4910,8 @@
       "code": "response.body.data[0].should.have.property('u_level').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "ba9c775a-0707-4688-9195-b5f57905b696",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "6ae372c5-c14f-48b9-a471-9cb7bb6eccd4",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3289,8 +4927,8 @@
       "code": "response.body.data[0].should.have.property('u_status').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "5c633a41-f466-4273-bb80-5ecbac857d43",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "ba75caa3-dd15-4543-bfb2-dc8ad0639689",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3306,8 +4944,8 @@
       "code": "response.body.data[0].should.have.property('u_points').not.to.be.NaN\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "5c7a6e94-4f8d-4639-aade-922337119852",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "aa6c806e-1d35-4359-80b9-457c439c1a58",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     },
     {
@@ -3323,8 +4961,8 @@
       "code": "response.body.data[0].should.have.property('store').not.to.be.empty\ndone();",
       "err": {},
       "isRoot": false,
-      "uuid": "3d9541d4-2635-4c81-825a-f1c03bd1b8ba",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "3aea5f54-7f0e-427f-b8b4-05d37bd0ae4b",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     }
   ],
@@ -3333,7 +4971,7 @@
       "title": "data.file_id",
       "fullTitle": "/menu/list data.file_id",
       "timedOut": false,
-      "duration": 1,
+      "duration": 2,
       "state": "failed",
       "pass": false,
       "fail": true,
@@ -3348,15 +4986,143 @@
         "stack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:83:70)"
       },
       "isRoot": false,
-      "uuid": "777e1608-7f24-4805-a63f-2c9b5d194cc8",
-      "parentUUID": "9830a41b-4662-4437-b95c-8c957eaa1e96",
+      "uuid": "3aebab16-0efd-4df3-b560-c34129d6980e",
+      "parentUUID": "f879f566-5d88-4e75-9513-b6cbe5e46850",
+      "skipped": false
+    },
+    {
+      "title": "data.file_id",
+      "fullTitle": "/menu/detail data.file_id",
+      "timedOut": false,
+      "duration": 0,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "code": "response.body.data[0].should.have.property('file_id').not.to.be.empty\ndone();",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected '' not to be empty",
+        "showDiff": false,
+        "actual": "",
+        "estack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:154:70)",
+        "stack": "AssertionError: expected '' not to be empty\n    at Context.<anonymous> (test/menu.js:154:70)"
+      },
+      "isRoot": false,
+      "uuid": "964d5600-6620-40f9-a157-e5393058135d",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.data.id",
+      "fullTitle": "/menu/detail data.options.data.id",
+      "timedOut": false,
+      "duration": 2,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "code": "response.body.data[0].options[0].data.should.have.property('id').not.to.be.empty\ndone();",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected [ Array(2) ] to have a property 'id'",
+        "showDiff": false,
+        "actual": [
+          {
+            "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+            "option": "cucumber",
+            "price": 1,
+            "checked": true
+          },
+          {
+            "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+            "option": "onion",
+            "price": 1
+          }
+        ],
+        "estack": "AssertionError: expected [ Array(2) ] to have a property 'id'\n    at Context.<anonymous> (test/menu.js:178:57)",
+        "stack": "AssertionError: expected [ Array(2) ] to have a property 'id'\n    at Context.<anonymous> (test/menu.js:178:57)"
+      },
+      "isRoot": false,
+      "uuid": "f7152aa9-2ad8-4e7d-896d-4914dafc9a25",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.data.option",
+      "fullTitle": "/menu/detail data.options.data.option",
+      "timedOut": false,
+      "duration": 0,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "code": "response.body.data[0].options[0].data.should.have.property('option').not.to.be.empty\ndone();",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected [ Array(2) ] to have a property 'option'",
+        "showDiff": false,
+        "actual": [
+          {
+            "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+            "option": "cucumber",
+            "price": 1,
+            "checked": true
+          },
+          {
+            "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+            "option": "onion",
+            "price": 1
+          }
+        ],
+        "estack": "AssertionError: expected [ Array(2) ] to have a property 'option'\n    at Context.<anonymous> (test/menu.js:182:57)",
+        "stack": "AssertionError: expected [ Array(2) ] to have a property 'option'\n    at Context.<anonymous> (test/menu.js:182:57)"
+      },
+      "isRoot": false,
+      "uuid": "864b1ca6-a1a1-44ea-a93a-7c9d32a1444f",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
+      "skipped": false
+    },
+    {
+      "title": "data.options.data.price",
+      "fullTitle": "/menu/detail data.options.data.price",
+      "timedOut": false,
+      "duration": 1,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "code": "response.body.data[0].options[0].data.should.have.property('price').not.to.be.empty\ndone();",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected [ Array(2) ] to have a property 'price'",
+        "showDiff": false,
+        "actual": [
+          {
+            "id": "55355639-946c-4b43-9daf-b34135aa5af7",
+            "option": "cucumber",
+            "price": 1,
+            "checked": true
+          },
+          {
+            "id": "e1c07851-7389-4a9c-aab2-169a9b16c872",
+            "option": "onion",
+            "price": 1
+          }
+        ],
+        "estack": "AssertionError: expected [ Array(2) ] to have a property 'price'\n    at Context.<anonymous> (test/menu.js:186:57)",
+        "stack": "AssertionError: expected [ Array(2) ] to have a property 'price'\n    at Context.<anonymous> (test/menu.js:186:57)"
+      },
+      "isRoot": false,
+      "uuid": "9c3e0d6a-b06f-4822-9fa5-10332f12094e",
+      "parentUUID": "7808587b-d33b-40f2-9be9-4e35c392a0fb",
       "skipped": false
     },
     {
       "title": "data.s_logo",
       "fullTitle": "/store/accountList data.s_logo",
       "timedOut": false,
-      "duration": 1,
+      "duration": 0,
       "state": "failed",
       "pass": false,
       "fail": true,
@@ -3366,8 +5132,8 @@
         "estack": "TypeError: Cannot convert undefined or null to object\n    at Function.keys (<anonymous>)\n    at Assertion.<anonymous> (node_modules/chai/lib/chai/core/assertions.js:420:25)\n    at Assertion.addProperty (node_modules/chai/lib/chai/utils/addProperty.js:43:29)\n    at Context.<anonymous> (test/store.js:80:69)"
       },
       "isRoot": false,
-      "uuid": "39b8a120-767a-455f-890a-e92c100c1cff",
-      "parentUUID": "1a629221-bee0-4614-9b54-542af5987ab6",
+      "uuid": "7e3aacb8-bad8-4779-91ca-29fbb3aacd55",
+      "parentUUID": "f8af462f-20ca-45b4-8e81-7ae023c18562",
       "skipped": false
     }
   ],

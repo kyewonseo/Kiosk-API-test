@@ -13,6 +13,7 @@
     "accountLogin": "/account/login",
     "storeAccountList": "/store/accountList",
     "categoryListMenu": "/category/list-menu",
-    "menuList": "/menu/list"
+    "menuList": "/menu/list",
+    "menuDetail": "/menu/detail"
   }
 }
