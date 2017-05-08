@@ -24,6 +24,7 @@ describe('Login', function() {
             .end((err, res) => {
                 res.should.have.status(200)
                 response = res
+      console.log(res.body)
                 done();
         });
     });

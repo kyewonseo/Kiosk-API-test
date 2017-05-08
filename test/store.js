@@ -48,6 +48,7 @@ describe('Store', function() {
       done();
     });
     it('data.user_id', function(done) {
+      console.log(response.body.data[0].user_id)
       response.body.data[0].should.have.property('user_id').not.to.be.empty
       done();
     });
