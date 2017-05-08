@@ -5,11 +5,14 @@
   "testEnv": {
     "account_id": "total_id3",
     "passwd": "encryptionPwd",
-    "store_id": "e4c44707-d404-42f9-836b-b9e8508a5a52"
+    "store_id": "e4c44707-d404-42f9-836b-b9e8508a5a52",
+    "sub_category_id": "3bc018ab-3100-48d3-9634-5c4cc02d899d",
+    "menu_id": "59f64ac4-32d5-4a66-921a-1807249e864d"
   },
   "api": {
     "accountLogin": "/account/login",
     "storeAccountList": "/store/accountList",
-    "categoryListMenu": "/category/list-menu"
+    "categoryListMenu": "/category/list-menu",
+    "menuList": "/menu/list"
   }
 }
