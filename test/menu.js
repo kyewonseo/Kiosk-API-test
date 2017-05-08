@@ -98,6 +98,7 @@ describe('Menu', function() {
           .end((err, res) => {
           res.should.have.status(200)
         response = res
+      console.log(response.body.data[0])
         done();
       });
     });
@@ -123,6 +124,7 @@ describe('Menu', function() {
       done();
     });
     it('data.menu_id', function(done) {
+      console.log(response.body.data[0].menu_id)
       response.body.data[0].should.have.property('menu_id').not.to.be.empty
       done();
     });
@@ -171,10 +173,12 @@ describe('Menu', function() {
       done();
     });
     it('data.options.data null check', function(done) {
+      console.log(response.body.data[0].options[0])
       response.body.data[0].options[0].should.have.property('data').not.to.be.empty
       done();
     });
     it('data.options.data.id', function(done) {
+      console.log(response.body.data[0].options[0].data[0].id)
       response.body.data[0].options[0].data[0].should.have.property('id').not.to.be.empty
       done();
     });

@@ -4,16 +4,25 @@
   },
   "testEnv": {
     "account_id": "total_id3",
+    "user_id": "4",
     "passwd": "encryptionPwd",
     "store_id": "e4c44707-d404-42f9-836b-b9e8508a5a52",
     "sub_category_id": "3bc018ab-3100-48d3-9634-5c4cc02d899d",
-    "menu_id": "59f64ac4-32d5-4a66-921a-1807249e864d"
+    "menu_id": "59f64ac4-32d5-4a66-921a-1807249e864d",
+    "option_menu_id": "55355639-946c-4b43-9daf-b34135aa5af7",
+    "price": 1,
+    "tax": 0.5,
+    "quantity": 1,
+    "order_id": ""
   },
   "api": {
     "accountLogin": "/account/login",
     "storeAccountList": "/store/accountList",
     "categoryListMenu": "/category/list-menu",
     "menuList": "/menu/list",
-    "menuDetail": "/menu/detail"
+    "menuDetail": "/menu/detail",
+    "orderPaymentList": "/order/payment-list",
+    "orderPaymentComplete": "/order/payment-complete",
+    "orderAdd": "/order/add"
   }
 }
