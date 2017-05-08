@@ -1,0 +1,28 @@
+{
+  "name": "kiosk-api-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter mochawesome"
+  },
+  "dependencies": {
+    "mocha": ">=3.0.0",
+    "mochawesome": ">=2.0.2",
+    "chai": "*"
+  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ApiWay/Kiosk-API-test.git"
+  },
+  "keywords": [
+    "apiway",
+    "mocha"
+  ],
+  "author": "master@bluehack.net",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ApiWay/Kiosk-API-test/issues"
+  },
+  "homepage": "https://github.com/ApiWay/Kiosk-API-test#readme"
+}
