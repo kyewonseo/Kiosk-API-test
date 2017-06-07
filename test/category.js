@@ -4,7 +4,7 @@ var chaiHttp = require('chai-http')
 var expect = chai.expect;
 var assert = chai.assert;
 var config = require('./config')
-let should = chai.should()
+var should = chai.should()
 
 chai.use(chaiHttp);
 

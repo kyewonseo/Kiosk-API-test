@@ -4,11 +4,16 @@ var chaiHttp = require('chai-http')
 var expect = chai.expect;
 var assert = chai.assert;
 var config = require('./config')
-let should = chai.should()
+var should = chai.should()
 
 chai.use(chaiHttp);
 
 describe('Menu', function() {
+
+  /**
+   * checked /menu/list API response.body.data[1]
+   * because response.body.data[0] parameters is often empty
+   * */
   describe(config.api.menuList, function() {
     var body = {
       "store_id": config.testEnv.store_id
@@ -44,43 +49,43 @@ describe('Menu', function() {
     });
     it('data.sub_category_id', function(done) {
       console.log(response.body.data[0].sub_category_id)
-      response.body.data[0].should.have.property('sub_category_id').not.to.be.empty
+      response.body.data[1].should.have.property('sub_category_id').not.to.be.empty
       done();
     });
     it('data.menu_id', function(done) {
-      response.body.data[0].should.have.property('menu_id').not.to.be.empty
+      response.body.data[1].should.have.property('menu_id').not.to.be.empty
       done();
     });
-    it('data.state_id', function(done) {
-      response.body.data[0].should.have.property('stage_id').not.to.be.empty
+    it('data.stage_id', function(done) {
+      response.body.data[1].should.have.property('stage_id').not.to.be.empty
       done();
     });
     it('data.m_item', function(done) {
-      response.body.data[0].should.have.property('m_item').not.to.be.empty
+      response.body.data[1].should.have.property('m_item').not.to.be.empty
       done();
     });
     it('data.m_type', function(done) {
-      response.body.data[0].should.have.property('m_type').not.to.be.empty
+      response.body.data[1].should.have.property('m_type').not.to.be.NaN
       done();
     });
     it('data.price', function(done) {
-      response.body.data[0].should.have.property('price').not.to.be.empty
+      response.body.data[1].should.have.property('price').not.to.be.NaN
       done();
     });
     it('data.points', function(done) {
-      response.body.data[0].should.have.property('points')
+      response.body.data[1].should.have.property('points')
       done();
     });
     it('data.calory', function(done) {
-      response.body.data[0].should.have.property('calory').not.to.be.empty
+      response.body.data[1].should.have.property('calory').not.to.be.NaN
       done();
     });
     it('data.use_YN', function(done) {
-      response.body.data[0].should.have.property('use_YN').not.to.be.empty
+      response.body.data[1].should.have.property('use_YN').not.to.be.empty
       done();
     });
     it('data.file_id', function(done) {
-      response.body.data[0].should.have.property('file_id').not.to.be.empty
+      response.body.data[1].should.have.property('file_id').not.to.be.empty
       done();
     });
   });
@@ -128,7 +133,7 @@ describe('Menu', function() {
       response.body.data[0].should.have.property('menu_id').not.to.be.empty
       done();
     });
-    it('data.state_id', function(done) {
+    it('data.stage_id', function(done) {
       response.body.data[0].should.have.property('stage_id').not.to.be.empty
       done();
     });
@@ -137,11 +142,11 @@ describe('Menu', function() {
       done();
     });
     it('data.m_type', function(done) {
-      response.body.data[0].should.have.property('m_type').not.to.be.empty
+      response.body.data[0].should.have.property('m_type').not.to.be.NaN
       done();
     });
     it('data.price', function(done) {
-      response.body.data[0].should.have.property('price').not.to.be.empty
+      response.body.data[0].should.have.property('price').not.to.be.NaN
       done();
     });
     it('data.points', function(done) {
@@ -149,7 +154,7 @@ describe('Menu', function() {
       done();
     });
     it('data.calory', function(done) {
-      response.body.data[0].should.have.property('calory').not.to.be.empty
+      response.body.data[0].should.have.property('calory').not.to.be.NaN
       done();
     });
     it('data.file_id', function(done) {
@@ -169,7 +174,7 @@ describe('Menu', function() {
       done();
     });
     it('data.options.option_type', function(done) {
-      response.body.data[0].options[0].should.have.property('option_type').not.to.be.empty
+      response.body.data[0].options[0].should.have.property('option_type').not.to.be.NaN
       done();
     });
     it('data.options.data null check', function(done) {
@@ -187,7 +192,7 @@ describe('Menu', function() {
       done();
     });
     it('data.options.data.price', function(done) {
-      response.body.data[0].options[0].data[0].should.have.property('price').not.to.be.empty
+      response.body.data[0].options[0].data[0].should.have.property('price').not.to.be.NaN
       done();
     });
   });

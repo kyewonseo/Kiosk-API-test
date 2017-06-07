@@ -4,14 +4,14 @@ var chaiHttp = require('chai-http')
 var expect = chai.expect;
 var assert = chai.assert;
 var config = require('./config')
-let should = chai.should()
+var should = chai.should()
 
 chai.use(chaiHttp);
 
 describe('Store', function() {
   describe(config.api.storeAccountList, function() {
     var body = {
-      "account_id": "total_id3"
+      "account_id": config.testEnv.account_id
     }
     var response = {}
     it('http status 200 check', function(done) {
@@ -61,11 +61,11 @@ describe('Store', function() {
       done();
     });
     it('data.u_level', function(done) {
-      response.body.data[0].should.have.property('u_level').not.to.be.empty
+      response.body.data[0].should.have.property('u_level').not.to.be.NaN
       done();
     });
     it('data.u_status', function(done) {
-      response.body.data[0].should.have.property('u_status').not.to.be.empty
+      response.body.data[0].should.have.property('u_status').not.to.be.NaN
       done();
     });
     it('data.u_points', function(done) {
