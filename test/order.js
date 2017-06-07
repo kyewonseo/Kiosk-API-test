@@ -27,26 +27,18 @@ describe('Order', function() {
       }]
     }
     var response = {}
-    var order_id = "";
-    it('http status 200 check', function(done) {
-        chai.request(config.server.BASE_PATH)
-        .post(config.api.orderAdd)
-            .set('content-type', 'application/json')
-            .send(body)
-            .end((err, res) => {
-                res.should.have.status(200)
-                response = res
-      config.testEnv.order_id = response.body.data.order_id
-      console.log(res.body)
-      console.log(config.testEnv.order_id)
-      body2 = {
-        "store_id": config.testEnv.store_id,
-        "user_id": config.testEnv.user_id,
-        "order_id": config.testEnv.order_id
-      }
-      console.log(body2)
-                done();
-        });
+    it('http status 200 check', function (done) {
+      chai.request(config.server.BASE_PATH)
+          .post(config.api.orderAdd)
+          .set('content-type', 'application/json')
+          .send(body)
+          .end((err, res) => {
+            res.should.have.status(200)
+            response = res
+            config.testEnv.order_id = response.body.data.order_id
+            console.log(res.body)
+            done();
+          });
     });
     it('data property existency check', function(done) {
       response.should.have.property('body');
@@ -73,6 +65,14 @@ describe('Order', function() {
 
     //Payment Complete
     it('http status 200 check', function(done) {
+      body2 = {
+        "store_id": config.testEnv.store_id,
+        "user_id": config.testEnv.user_id,
+        "order_id": config.testEnv.order_id,
+        "price": config.testEnv.price,
+        "tax": config.testEnv.tax
+      }
+
       chai.request(config.server.BASE_PATH)
           .post(config.api.orderPaymentComplete)
           .set('content-type', 'application/json')
@@ -101,8 +101,8 @@ describe('Order', function() {
       response.body.should.have.property('data').not.to.be.empty
       done();
     });
-    it('data.order_id', function(done) {
-      response.body.data.should.have.property('order_id').not.to.be.empty
+    it('data.order_num', function(done) {
+      response.body.data.should.have.property('order_num').not.to.be.NaN
       done();
     });
 
@@ -119,8 +119,6 @@ describe('Order', function() {
         .end((err, res) => {
         res.should.have.status(200)
       response = res
-      config.testEnv.order_id = response.body.data.order_id
-      console.log(body2)
       console.log(res.body)
       done();
     });
