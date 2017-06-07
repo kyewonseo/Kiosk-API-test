@@ -3,17 +3,20 @@
     "BASE_PATH": "http://175.207.13.212:8080"
   },
   "testEnv": {
-    "account_id": "total_id3",
-    "user_id": "4",
-    "passwd": "encryptionPwd",
-    "store_id": "e4c44707-d404-42f9-836b-b9e8508a5a52",
-    "sub_category_id": "3bc018ab-3100-48d3-9634-5c4cc02d899d",
-    "menu_id": "59f64ac4-32d5-4a66-921a-1807249e864d",
-    "option_menu_id": "55355639-946c-4b43-9daf-b34135aa5af7",
+    "account_id": "test@gmail.com",
+    "user_id": "076704b0-3c58-11e7-a8ba-e710ba9c623c",
+    "passwd": "1111",
+    "store_id": "0372da56-7e95-4fb8-aa72-a6b5f2d93977",
+    "sub_category_id": "dec40870-022f-4c7d-9316-736e2c22a658",
+    "menu_id": "028df504-2099-4ba1-978d-1d327799df19",
+    "option_menu_id": "37f5f64f-e68d-4131-86a2-3b53bfb944e7",
     "price": 1,
-    "tax": 0.5,
+    "tax": 0.15,
     "quantity": 1,
-    "order_id": ""
+    "order_id": "",
+    "paymethod": "0,1,0",
+    "points": 0,
+    "quantity": 1
   },
   "api": {
     "accountLogin": "/account/login",

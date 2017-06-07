@@ -4,7 +4,7 @@ var chaiHttp = require('chai-http')
 var expect = chai.expect;
 var assert = chai.assert;
 var config = require('./config')
-let should = chai.should()
+var should = chai.should()
 
 chai.use(chaiHttp);
 
@@ -13,16 +13,16 @@ describe('Order', function() {
     var body = {
       "store_id": config.testEnv.store_id,
       "user_id": config.testEnv.user_id,
-      "price": 2,
-      "paymethod": "0,1,0",
-      "tax": 0.5,
-      "points": 1,
+      "price": config.testEnv.price,
+      "paymethod": config.testEnv.paymethod,
+      "tax": config.testEnv.tax,
+      "points": config.testEnv.points,
       "detail": [{
         "menu_id": config.testEnv.menu_id,
-        "quantity": 1,
+        "quantity": config.testEnv.quantity,
         "option": [{
           "menu_id": config.testEnv.option_menu_id,
-          "quantity": 1
+          "quantity": config.testEnv.quantity
         }]
       }]
     }
