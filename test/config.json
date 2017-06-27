@@ -1,15 +1,16 @@
 {
   "server": {
-    "BASE_PATH": "http://175.207.13.212:8080"
+    "BASE_PATH": "http://kiosk.dabotop.com:8080"
   },
   "testEnv": {
-    "account_id": "test@gmail.com",
-    "user_id": "076704b0-3c58-11e7-a8ba-e710ba9c623c",
-    "passwd": "1111",
-    "store_id": "0372da56-7e95-4fb8-aa72-a6b5f2d93977",
-    "sub_category_id": "dec40870-022f-4c7d-9316-736e2c22a658",
-    "menu_id": "028df504-2099-4ba1-978d-1d327799df19",
-    "option_menu_id": "37f5f64f-e68d-4131-86a2-3b53bfb944e7",
+    "account_id": "kyu@kiosk.com",
+    "admin_id": "2a80e982-621e-4a37-bcd2-afa86e7fee72",
+    "user_id": "c8d46a60-5725-11e7-a2a6-45542a16344f",
+    "passwd": "456123",
+    "store_id": "7bd41903-7b6a-40a4-aee5-7fe4b38b03ba",
+    "sub_category_id": "3071a28b-5e5f-4f9a-a9de-9ece33f6c28a",
+    "menu_id": "29686a52-3f5c-42bb-a8d6-daa7a9c2d113",
+    "option_menu_id": "82bd5816-09fb-497a-9c0b-8014de68824",
     "price": 1,
     "tax": 0.15,
     "quantity": 1,

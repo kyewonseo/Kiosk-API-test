@@ -11,7 +11,8 @@ chai.use(chaiHttp);
 describe('Store', function() {
   describe(config.api.storeAccountList, function() {
     var body = {
-      "account_id": config.testEnv.account_id
+      "account_id": config.testEnv.account_id,
+      "admin_id": config.testEnv.admin_id
     }
     var response = {}
     it('http status 200 check', function(done) {
